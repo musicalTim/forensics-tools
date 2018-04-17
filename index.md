@@ -1,9 +1,13 @@
 # Forensics tools
 This is a collection of usage notes for various forensics tools.
 
+## Documents
+[Documents](docs/docs.md)
+
+
 ## Linux
-To be continued
+[Linux Tools](linux/linux.md)
 
 
 ## Windows
-To be continued
+[Windows Tools](windows/windows.md)
