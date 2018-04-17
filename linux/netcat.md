@@ -40,4 +40,4 @@ For the target computer, use the nc command provided by [BusyBox]
 * https://www.busybox.net/
 * nc in Ubuntu is related to BSD Netcat (https://www.freebsd.org/cgi/man.cgi?query=netcat)
 
-[Linux](linux.md)
+[Linux Forensics Tools](linux.md)
