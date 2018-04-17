@@ -4,7 +4,9 @@
 `x86-who`
 
 ## Description
-Copied binary of 'who' command.  List logged in users.
+Copied binary of 'who' command.
+
+Lists logged in users.
 
 
 ## Usage
@@ -33,3 +35,5 @@ https://www.ubuntu.com/server
 GNU Coreutils 8.26
 http://www.gnu.org/software/coreutils/coreutils.html
 
+
+[Linux Forensics Tools](linux.md)
