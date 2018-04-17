@@ -1,0 +1,63 @@
+LINUX LIVE ANALYSIS CHECKLIST
+  Author: Tim Wood  Updated: 2018-04-16
+
+Investigator:____________________  Target computer:____________________
+        Date:________________ Time:____________
+
+<NC PIPE> = ./busybox-i686 nc <FORENSIC IP> 11111
+
+SETUP
+☐  Mount linux-x86.iso
+☐  Target IP: ________________  Forensic IP: ________________
+    Time:________ Action: (Tgt.)./busybox-i686 ip addr show (For.) ip addr show
+☐  Data capture setup on forensics machine
+    Time:____________ Action: nc -v l -p 11111 >> test.txt
+☐  Test connection from target computer 
+    Time:____________ Action:
+    ./busybox-i686 echo "testtest" | ./busybox-i686 nc <FORENSIC IP> 11111
+
+COLLECT DATE AND TIME
+☐  Date and time
+    Time:____________ Action: ./busybox-i686 date <NC PIPE>
+
+COLLECT NETWORK
+☐  Network connections and open TCP/UDP ports
+    Time:____________ Action: ./busybox-i686 netstat -anp <NC PIPE>
+☐  Executables connected to active connections/listening ports
+    Time:____________ Action: ./x86-lsof -n  <NC PIPE>
+☐  Internal routing table
+    Time:____________ Action: ./busybox-i686 netstat -rn <NC PIPE>
+
+COLLECT PROCESSES, USERS, FILES, MODULES
+☐  Running processes and services
+    Time:____________ Action: ./busybox-i686 ps <NC PIPE>
+☐  Users logged on
+    Time:____________ Action: ./x86-who <NC PIPE>
+☐  Mounted filesystems
+    Time:____________ Action: ./busybox df -h <NC PIPE>
+☐  Kernel modules
+    Time:____________ Action: ./busybox-i686 lsmod <NC PIPE>
+
+COLLECT FILES
+☐  Scheduled jobs
+    Time:____________ Action:
+    ./busybox-i686 ls to search /etc/cron.d/ and /var/spool/cron/crontabs/
+    ./busybox-i686 cat <DIRECTORY>/* <NC PIPE>
+
+COLLECT NONVOLATILE INFO
+☐  System information (hostname, os version, distribution)
+    Time:____________ Action: 
+    ./busybox-i686 hostname <NC PIPE>
+    ./busybox-i686 uname -a <NC PIPE>
+    ./busybox-i686 cat /etc/*release <NC PIPE>
+☐  Network information
+    Time:____________ Action: ./busybox-i686 ip addr show <NC PIPE>
+
+☐  Hash all evidence files
+    Time:____________ Action: (For.)  sha256sum * > sha256.txt
+
+INVESTIGATE MORE
+  - Open TCP and UDP ports: netstat results
+  - Executables connected to listening ports: lsof results
+  - Running services: ps results
+  - Local/remote open files and associated processes: lsof results

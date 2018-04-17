@@ -2,7 +2,7 @@
 This is a collection of usage notes for various forensics tools.
 
 ## Documents
-[Documents](docs/docs.md)
+[Documents](doc/doc.md)
 
 
 ## Linux
