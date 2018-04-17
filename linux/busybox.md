@@ -27,6 +27,9 @@ In contrast, the Busybox [website](https://www.busybox.net/) is not as helpful.
 However, Busybox does provide precompiled binaries, as long as you know that 
 multi-call is the all-in-one version you want.
 
+Do not rename the binary or it won't work.
+
+
 [lsof]: x86-lsof.md
 [who]: x86-who.md
 
