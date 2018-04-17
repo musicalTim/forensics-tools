@@ -11,7 +11,7 @@
 * [Sysinternals Suite 2010] - Old 32-bit version for Windows XP compatibility
 
 [Sysinternals Suite]: sysinternals.md
-[Sysinternals Suite]: sysinternals-2010.md
+[Sysinternals Suite 2010]: sysinternals-2010.md
 
 
 [Index](../index.md)

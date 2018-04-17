@@ -1,4 +1,4 @@
-# Microsoft Sysinternals Suite: 2010 version
+# Microsoft Sysinternals Suite
 
 ## Description
 A collection of troubleshooting utilities provided by Microsoft, which includes 
